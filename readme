@@ -1,0 +1,39 @@
+# macOS Policy Banner Deployer
+
+A simple Bash script to deploy a macOS login banner using a Base64-encoded RTF file.
+
+This is useful for enterprise environments where security/compliance banners are required at login.
+
+---
+
+## 🚀 Features
+
+- Deploys login banner to:
+/Library/Security/PolicyBanner.rtf
+
+- Uses Base64 encoding (no external file dependency)
+- Works with:
+- Jamf Pro
+- Microsoft Intune (Shell Scripts)
+- Any MDM solution
+- Lightweight and easy to customize
+
+---
+
+## 📂 Script Overview
+
+The script:
+1. Decodes Base64 RTF content
+2. Saves it temporarily
+3. Moves it to the system banner location
+4. Applies correct permissions
+
+---
+
+## 🛠️ Usage
+
+### Run locally
+
+```bash
+chmod +x deploy_banner.sh
+./deploy_banner.sh
